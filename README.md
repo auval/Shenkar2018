@@ -3,7 +3,6 @@ Android Development Workshop
 **Shenkar** <br/>
 [Amir Uval](shenkar@mindtheapps.com)
 
-
 ## Useful links
 - [Android Developers YouTube Channel](https://www.youtube.com/user/androiddevelopers)
 - [DevBites short videos](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc_XOgcRukSoKKjewFJZrKV0)
