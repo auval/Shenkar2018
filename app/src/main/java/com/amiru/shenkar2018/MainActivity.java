@@ -23,15 +23,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onDigitClicked(View view) {
-        String digitClicked = (String) ((Button) view).getText();
 
-        String currentText = (String) calcScreen.getText();
+        // "tag" is an optional string you can add to any view to use if you need
+        // here I set it in the layout file, to make sure I don't try to cast operators to Integer
+        Object tag = view.getTag();
 
-        int currentValue = Integer.parseInt(currentText);
-
-        int newValue = 10*currentValue + Integer.parseInt(digitClicked);
-
-        calcScreen.setText(String.valueOf(newValue));
-
+        if ("num".equals(tag)) {
+            String digitClicked = (String) ((Button) view).getText();
+            String currentText = (String) calcScreen.getText();
+            int currentValue = Integer.parseInt(currentText);
+            int newValue = 10 * currentValue + Integer.parseInt(digitClicked);
+            calcScreen.setText(String.valueOf(newValue));
+        }
     }
 }
