@@ -78,18 +78,35 @@ Useful **git** commands:
 
 ####class exercise
 
+- Demonstrate how to: 
+  - Create a new project
+  - Use ConstraintLayout
+  - Register onClick listener
+  - get/set text from views
 
-- Make main menu for exercises
-  - Refactoring: rename MainActivity and related layout to Lesson2Activity and lesson2_layout
-  - Create a new MainActivity to serve as a high level menu for exercises
-  - Mark the new activity as MAIN in the manifest
+#### Homework:
+
+- Complete the calculator shown in class
+  - add all the missing buttons, make the layout as nice as you can
+  - support operations +, - , *, /, =, and clear button
+  - 
 
 
+
+---
+
+Rest of the course plan:
+-
 ---
 
 ### Lesson #4
 
 [Slides](https://goo.gl/CXtCcy)
+
+- Make main menu for exercises
+  - Refactoring: rename MainActivity and related layout to Lesson2Activity and lesson2_layout
+  - Create a new MainActivity to serve as a high level menu for exercises
+  - Mark the new activity as MAIN in the manifest
 
 #### Code compare
 - [Adding action bar](https://github.com/auval/AndroidWorkshop/compare/4...4.1)
