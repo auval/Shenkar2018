@@ -14,7 +14,7 @@ public class MainMenuActivity extends AppCompatActivity {
     LinearLayoutManager mLayoutManager;
     MyAdapter mAdapter;
 
-    ArrayList<Homework> hw = new ArrayList<>();
+    ArrayList<MyListItem> hw = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,11 @@ public class MainMenuActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        hw.add(new Homework("Calculator","Homework #1",CalculatorActivity.class));
+
+        for (int i = 1; i <= 100; i++) {
+            hw.add(new MyListItem("This is item number " + i));
+        }
+
 
         // specify an adapter (see also next example)
         mAdapter = new MyAdapter(hw);
@@ -40,6 +44,6 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void onCalcClicked(View view) {
-        startActivity(new Intent(this,CalculatorActivity.class));
+        startActivity(new Intent(this, CalculatorActivity.class));
     }
 }
