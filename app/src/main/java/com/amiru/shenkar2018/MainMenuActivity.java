@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,9 +45,36 @@ public class MainMenuActivity extends AppCompatActivity {
         mAdapter = new MyAdapter(hw);
         mRecyclerView.setAdapter(mAdapter);
 
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
     }
 
     public void onCalcClicked(View view) {
         startActivity(new Intent(this, CalculatorActivity.class));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.lesson4, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.mi_settings) {
+            Toast.makeText(getBaseContext(), "Todo: settings screen", Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
