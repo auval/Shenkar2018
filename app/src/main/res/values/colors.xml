@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="calcBg">#1b251d</color>
     <color name="calcScreenBg">#406144</color>
+    <color name="buttonsColor">#ffffff</color>
 </resources>
