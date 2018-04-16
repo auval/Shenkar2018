@@ -83,4 +83,8 @@ public class MainMenuActivity extends AppCompatActivity {
     public void onCalcClicked(View view) {
         startActivity(new Intent(this, CalculatorActivity.class));
     }
+
+    public void onPrefsClicked(View view) {
+        startActivity(new Intent(this, PrefsActivity.class));
+    }
 }

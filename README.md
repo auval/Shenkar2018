@@ -119,16 +119,18 @@ RecyclerView, Refactoring
 #### [Playing with raw SQL](/misc/SQLSample.md)
 
 
-- [Settings walkthrough](https://docs.google.com/document/d/1PVNrj7HtfjqAsHtnUnfLOSoTKthzemtfpbvQ-3CBE4U/edit?usp=sharing)
-  Every student implements on his/her pc during class.
-    - [the resulting project](https://github.com/auval/MinimalSettingsActivity) - use this as a reference!
-    
+#### Homework
+
+
 
 #### Tips
 
 ##### print the content of the property file from the emulator
  `app=com.amiru.shenkar2018`
  `adb  -e shell 'cat /data/data/${app}/shared_prefs/*'`
+ 
+##### online 9 patch tool 
+ https://romannurik.github.io/AndroidAssetStudio/nine-patches.html
  
 ##### creating App Toolbar activity
   - Follow the [tutorial](https://developer.android.com/training/appbar/index.html)
@@ -181,6 +183,13 @@ Rest of the course plan:
 - Low level graphics and animation
 
 - [A lesson on Resources by Chaim Michael (with his permission)](https://youtu.be/SCLs7jyGs9k)
+
+
+- [Settings walkthrough](https://docs.google.com/document/d/1PVNrj7HtfjqAsHtnUnfLOSoTKthzemtfpbvQ-3CBE4U/edit?usp=sharing)
+  Every student implements on his/her pc during class.
+    - [the resulting project](https://github.com/auval/MinimalSettingsActivity) - use this as a reference!
+    
+
 
 ---
 
