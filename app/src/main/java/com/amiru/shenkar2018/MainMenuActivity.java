@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.amiru.shenkar2018.storage.StorageExampleActivity;
+
 import java.util.ArrayList;
 
 public class MainMenuActivity extends AppCompatActivity {
@@ -51,10 +53,6 @@ public class MainMenuActivity extends AppCompatActivity {
 
     }
 
-    public void onCalcClicked(View view) {
-        startActivity(new Intent(this, CalculatorActivity.class));
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -76,5 +74,13 @@ public class MainMenuActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onStorageClicked(View view) {
+        startActivity(new Intent(this, StorageExampleActivity.class));
+    }
+
+    public void onCalcClicked(View view) {
+        startActivity(new Intent(this, CalculatorActivity.class));
     }
 }

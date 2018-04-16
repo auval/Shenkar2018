@@ -92,21 +92,57 @@ Useful **git** commands:
   - 
 
 
-
----
-
-Rest of the course plan:
--
----
-
 ### Lesson #4
+
+RecyclerView, Refactoring
 
 [Slides](https://goo.gl/CXtCcy)
 
-- Make main menu for exercises
+- RecycleView (few words only + reference to code)
+    - [Official Training]()
+    - [Replacing ListView with RecycleView Diff](https://github.com/auval/AndroidWorkshop/compare/6...6.1)
+
+#### Homework:
+- Make main menu for the homework list
   - Refactoring: rename MainActivity and related layout to Lesson2Activity and lesson2_layout
   - Create a new MainActivity to serve as a high level menu for exercises
   - Mark the new activity as MAIN in the manifest
+  - Create a RecyclerView for the list
+  - The data (row) should include a way to launch the correct activity, without passing a context (to avoid memory leak). How?
+
+---
+
+### Lesson 5
+
+[Slides](https://goo.gl/gVRMt2)
+
+#### [Playing with raw SQL](/misc/SQLSample.md)
+
+
+- [Settings walkthrough](https://docs.google.com/document/d/1PVNrj7HtfjqAsHtnUnfLOSoTKthzemtfpbvQ-3CBE4U/edit?usp=sharing)
+  Every student implements on his/her pc during class.
+    - [the resulting project](https://github.com/auval/MinimalSettingsActivity) - use this as a reference!
+    
+
+#### Tips
+
+##### print the content of the property file from the emulator
+ `app=com.amiru.shenkar2018`
+ `adb  -e shell 'cat /data/data/${app}/shared_prefs/*'`
+ 
+##### creating App Toolbar activity
+  - Follow the [tutorial](https://developer.android.com/training/appbar/index.html)
+    - It's missing some important steps, so read here as well.
+  - create an svg resource icon
+    - New > “Vector Asset” from the context menu
+  - define some menu options
+    - New > “Android resource directory” from the context menu
+    - Change the “Resource type” drop-down to be “menu”, then click OK to create the directory
+    - right-click over your new res/menu/ directory and choose New > “Menu resource file” from the context menu
+    - name it "lesson3.xml"
+    - add \<item> resources, like the example in the tutorial or your own.
+  - Add  `onCreateOptionsMenu(Menu menu) {}` to the activity, to inflate menu items
+
 
 #### Code compare
 - [Adding action bar](https://github.com/auval/AndroidWorkshop/compare/4...4.1)
@@ -120,58 +156,28 @@ Rest of the course plan:
 - [Added SQL implementation and example](https://github.com/auval/AndroidWorkshop/compare/4.2.3...4.3)
 
 
-#### print the content of the property file on the emulator
- `adb  -s emulator-5554 shell 'cat /data/data/org.shenkar.auval.codesamples/shared_prefs/org.shenkar.auval.codesamples_preferences.xml'`
-
-
-#### [Playing with raw SQL](/examples/SQLSample.md)
-
-#### Tips
-
-- clone this workspace to your local pc
-  - file -> new -> Project from version control -> GitHub
-  - paste https://github.com/auval/AndroidWorkshop.git
-  - define local directory for the workspace
-  - clone
-
-- creating App Toolbar activity
-  - Follow the [tutorial](https://developer.android.com/training/appbar/index.html)
-    - It's missing some important steps, so read here as well.
-  - create an svg resource icon
-    - New > “Vector Asset” from the context menu
-  - define some menu options
-    - New > “Android resource directory” from the context menu
-    - Change the “Resource type” drop-down to be “menu”, then click OK to create the directory
-    - right-click over your new res/menu/ directory and choose New > “Menu resource file” from the context menu
-    - name it "lesson3.xml"
-    - add \<item> resources, like the example in the tutorial or your own.
-  - Add  `onCreateOptionsMenu(Menu menu) {}` to the activity, to inflate menu items
-
 ---
 
-### Lesson 5
+Rest of the course plan:
+-
+---
 
-[Slides](https://goo.gl/gVRMt2)
-
-- [Settings walkthrough](https://docs.google.com/document/d/1PVNrj7HtfjqAsHtnUnfLOSoTKthzemtfpbvQ-3CBE4U/edit?usp=sharing)
-  Every student implements on his/her pc during class.
-    - [the resulting project](https://github.com/auval/MinimalSettingsActivity) - use this as a reference!
-    
-- Scene transition
-    - example: [SceneTransitionActivity](app/src/main/java/org/shenkar/auval/codesamples/SceneTransitionActivity.java)
-    - [diff](https://github.com/auval/AndroidWorkshop/compare/5...5.1)
 
 ---
 
 ### Lesson 6
 
-    RecyclerView, Scene Transitions, Low Level Graphics
+     Scene Transitions, Low Level Graphics
 
 [Slides](https://goo.gl/hY7ALc)
 
-- RecycleView (few words only + reference to code)
-    - [Official Training]()
-    - [Replacing ListView with RecycleView Diff](https://github.com/auval/AndroidWorkshop/compare/6...6.1)
+
+- Scene transition
+    - example: [SceneTransitionActivity](app/src/main/java/org/shenkar/auval/codesamples/SceneTransitionActivity.java)
+    - [diff](https://github.com/auval/AndroidWorkshop/compare/5...5.1)
+
+
+
 - Low level graphics and animation
 
 - [A lesson on Resources by Chaim Michael (with his permission)](https://youtu.be/SCLs7jyGs9k)
