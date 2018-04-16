@@ -1,0 +1,26 @@
+# in linux/mac: make this file executable using chmod +x
+# note: this script will not run on "Google Play Intel x86 Atom System Image"
+# (if the emulator has Google Play store inside - it will fail)
+
+app=com.amiru.shenkar2018
+
+mkdir tmp
+
+# emulator
+adb -e root
+adb -e pull /data/data/${app}/databases/clog.db tmp/shenkar2018_EMULATOR.db
+
+# read device
+adb -d shell <<EOF
+run-as $app
+cp databases/clog.db  /sdcard/Download/
+exit
+EOF
+
+adb -d pull /sdcard/Download/clog.db tmp/shenkar2018_DEVICE.db
+
+# requires the sqlite3 executable to be installed.
+ # you can replace it with any other sqlite database tool
+sqlite3 tmp/shenkar2018_EMULATOR.db
+#or:
+#sqlite3 tmp/shenkar2018_DEVICE.db
