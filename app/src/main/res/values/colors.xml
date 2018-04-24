@@ -6,4 +6,5 @@
     <color name="calcBg">#1b251d</color>
     <color name="calcScreenBg">#406144</color>
     <color name="buttonsColor">#ffffff</color>
+    <color name="opButtonsColor" >#6e6e6e</color>
 </resources>
