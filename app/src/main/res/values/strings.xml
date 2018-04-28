@@ -5,4 +5,5 @@
     <string name="read_from_db">Read from DB</string>
     <string name="name">Name</string>
     <string name="just_pick_a_number_i_ll_remember_it">Just pick a number, I\'ll remember it</string>
+    <string name="tap_a_row">Tap on a row</string>
 </resources>

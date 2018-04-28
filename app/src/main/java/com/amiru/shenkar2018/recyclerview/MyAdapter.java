@@ -1,7 +1,8 @@
 package com.amiru.shenkar2018.recyclerview;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,13 @@ import com.amiru.shenkar2018.R;
 
 import java.util.ArrayList;
 
+/**
+ * demonstrating
+ * - recycler view (https://developer.android.com/guide/topics/ui/layout/recyclerview)
+ * - live data (https://developer.android.com/topic/libraries/architecture/livedata)
+ *
+ * -au
+ */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<MyListItem> mDataset;
 
@@ -36,7 +44,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        holder.setCurrentItem(mDataset.get(position));
         holder.mTitle.setText(mDataset.get(position).getTitle());
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -49,9 +59,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private static final String TAG = ViewHolder.class.getSimpleName();
         // each data item is just a string in this case
         public TextView mTitle;
+        private MyListItem currentItem;
 
         public ViewHolder(ViewGroup v) {
             super(v);
@@ -61,8 +71,30 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         @Override
         public void onClick(View v) {
-            Log.i(TAG, "A row " + v + " was clicked");
+            sLiveCurrentItem.postValue(currentItem);
         }
 
+
+        public void setCurrentItem(MyListItem currentItem) {
+            this.currentItem = currentItem;
+        }
     }
+
+    /**
+     * LiveData is allowed to be declared static without danger of memory leak
+     * It actually holds a static reference to the activity inside
+     * But it's lifecycle aware, so it does all the work for us (keeping a weak reference,
+     * replacing it when a new activity is created), so the new activity gets the most current data.
+     *
+     * -au
+     */
+    private static MutableLiveData<MyListItem> sLiveCurrentItem;
+
+    public LiveData<MyListItem> getCurrentItemLive() {
+        if (sLiveCurrentItem == null) {
+            sLiveCurrentItem = new MutableLiveData<>();
+        }
+        return sLiveCurrentItem;
+    }
+
 }
