@@ -1,4 +1,4 @@
-package com.amiru.shenkar2018;
+package com.amiru.shenkar2018.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.amiru.shenkar2018.R;
 
 import java.util.ArrayList;
 

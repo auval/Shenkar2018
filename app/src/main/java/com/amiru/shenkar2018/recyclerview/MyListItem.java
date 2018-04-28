@@ -1,4 +1,4 @@
-package com.amiru.shenkar2018;
+package com.amiru.shenkar2018.recyclerview;
 
 /**
  * Created by amir on 4/7/18.

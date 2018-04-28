@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".storage.StorageExampleActivity" />
-        <activity android:name=".PrefsActivity"></activity>
+        <activity android:name=".PrefsActivity" />
+        <activity android:name=".recyclerview.RecyclerViewExampleActivity"></activity>
     </application>
 
 </manifest>
