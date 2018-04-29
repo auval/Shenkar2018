@@ -62,4 +62,8 @@ public class MainMenuActivity extends AppCompatActivity {
     public void onRecyclerDemoClicked(View view) {
         startActivity(new Intent(this, RecyclerViewExampleActivity.class));
     }
+
+    public void onLayoutAnimationClicked(View view) {
+        startActivity(new Intent(this, LayoutAnimationActivity.class));
+    }
 }

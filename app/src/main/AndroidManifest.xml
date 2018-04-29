@@ -22,7 +22,8 @@
         </activity>
         <activity android:name=".storage.StorageExampleActivity" />
         <activity android:name=".PrefsActivity" />
-        <activity android:name=".recyclerview.RecyclerViewExampleActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewExampleActivity" />
+        <activity android:name=".LayoutAnimationActivity"></activity>
     </application>
 
 </manifest>
