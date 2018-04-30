@@ -23,7 +23,10 @@
         <activity android:name=".storage.StorageExampleActivity" />
         <activity android:name=".PrefsActivity" />
         <activity android:name=".recyclerview.RecyclerViewExampleActivity" />
-        <activity android:name=".LayoutAnimationActivity"></activity>
+        <activity android:name=".LayoutAnimationActivity" />
+        <activity
+            android:name=".llg.LowLevelGraphicsActivity"
+            android:label="@string/title_activity_low_level_graphics"></activity>
     </application>
 
 </manifest>

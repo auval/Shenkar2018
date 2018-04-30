@@ -132,39 +132,6 @@ Create a mini birthdays app as part of your homework project.
  
 ##### online 9 patch tool 
  https://romannurik.github.io/AndroidAssetStudio/nine-patches.html
- 
-##### creating App Toolbar activity
-  - Follow the [tutorial](https://developer.android.com/training/appbar/index.html)
-    - It's missing some important steps, so read here as well.
-  - create an svg resource icon
-    - New > “Vector Asset” from the context menu
-  - define some menu options
-    - New > “Android resource directory” from the context menu
-    - Change the “Resource type” drop-down to be “menu”, then click OK to create the directory
-    - right-click over your new res/menu/ directory and choose New > “Menu resource file” from the context menu
-    - name it "lesson3.xml"
-    - add \<item> resources, like the example in the tutorial or your own.
-  - Add  `onCreateOptionsMenu(Menu menu) {}` to the activity, to inflate menu items
-
-
-#### Code compare
-- [Adding action bar](https://github.com/auval/AndroidWorkshop/compare/4...4.1)
-- [Adding settings](https://github.com/auval/AndroidWorkshop/compare/4.1...4.2)
-   - Simply create a new "Settings Activity" from the `new > activity` command menu.  
-- [Enabling "< Back" from settings](https://github.com/auval/AndroidWorkshop/compare/4.2...4.2.1)
-   - By overriding `onOptionsItemSelected()`
-- [Showing how to read values from SharedPreferences](https://github.com/auval/AndroidWorkshop/compare/4.2.1...4.2.2)
-  - And using AsyncHandler and UiHandler on the way
-- [Showing how to write values to SharedPreferences from code](https://github.com/auval/AndroidWorkshop/compare/4.2.2...4.2.3)
-- [Added SQL implementation and example](https://github.com/auval/AndroidWorkshop/compare/4.2.3...4.3)
-
-
----
-
-Rest of the course plan:
--
----
-
 
 ---
 
@@ -190,6 +157,40 @@ Rest of the course plan:
   Every student implements on his/her pc during class.
     - [the resulting project](https://github.com/auval/MinimalSettingsActivity) - use this as a reference!
     
+
+
+##### creating App Toolbar activity
+  - Follow the [tutorial](https://developer.android.com/training/appbar/index.html)
+    - It's missing some important steps, so read here as well.
+  - create an svg resource icon
+    - New > “Vector Asset” from the context menu
+  - define some menu options
+    - New > “Android resource directory” from the context menu
+    - Change the “Resource type” drop-down to be “menu”, then click OK to create the directory
+    - right-click over your new res/menu/ directory and choose New > “Menu resource file” from the context menu
+    - name it "lesson3.xml"
+    - add \<item> resources, like the example in the tutorial or your own.
+  - Add  `onCreateOptionsMenu(Menu menu) {}` to the activity, to inflate menu items
+
+
+#### Code compare
+- [Adding action bar](https://github.com/auval/AndroidWorkshop/compare/4...4.1)
+- [Adding settings](https://github.com/auval/AndroidWorkshop/compare/4.1...4.2)
+   - Simply create a new "Settings Activity" from the `new > activity` command menu.
+- [Enabling "< Back" from settings](https://github.com/auval/AndroidWorkshop/compare/4.2...4.2.1)
+   - By overriding `onOptionsItemSelected()`
+- [Showing how to read values from SharedPreferences](https://github.com/auval/AndroidWorkshop/compare/4.2.1...4.2.2)
+  - And using AsyncHandler and UiHandler on the way
+- [Showing how to write values to SharedPreferences from code](https://github.com/auval/AndroidWorkshop/compare/4.2.2...4.2.3)
+- [Added SQL implementation and example](https://github.com/auval/AndroidWorkshop/compare/4.2.3...4.3)
+
+
+
+---
+
+Rest of the course plan:
+-
+---
 
 
 ---

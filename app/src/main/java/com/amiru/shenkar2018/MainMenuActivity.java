@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.amiru.shenkar2018.llg.LowLevelGraphicsActivity;
 import com.amiru.shenkar2018.recyclerview.RecyclerViewExampleActivity;
 import com.amiru.shenkar2018.storage.StorageExampleActivity;
 
@@ -65,5 +66,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void onLayoutAnimationClicked(View view) {
         startActivity(new Intent(this, LayoutAnimationActivity.class));
+    }
+
+    public void onLowLevelGraphicsClicked(View view) {
+        startActivity(new Intent(this, LowLevelGraphicsActivity.class));
     }
 }
