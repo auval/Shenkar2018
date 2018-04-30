@@ -99,8 +99,7 @@ RecyclerView, Refactoring
 [Slides](https://goo.gl/CXtCcy)
 
 - RecycleView (few words only + reference to code)
-    - [Official Training]()
-    - [Replacing ListView with RecycleView Diff](https://github.com/auval/AndroidWorkshop/compare/6...6.1)
+    - [Official Training](https://developer.android.com/guide/topics/ui/layout/recyclerview)
 
 #### Homework:
 - Make main menu for the homework list
@@ -121,6 +120,8 @@ RecyclerView, Refactoring
 
 #### Homework
 
+Create a mini birthdays app as part of your homework project.
+[Specifications](https://docs.google.com/presentation/d/1SSIPLbCHPEO2b7ZG1y2c_tFYi85pYzn5AR8PKF9uhMY/edit#slide=id.g3706e4d7df_1_144)
 
 
 #### Tips
