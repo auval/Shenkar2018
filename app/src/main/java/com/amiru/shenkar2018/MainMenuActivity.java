@@ -71,4 +71,8 @@ public class MainMenuActivity extends AppCompatActivity {
     public void onLowLevelGraphicsClicked(View view) {
         startActivity(new Intent(this, LowLevelGraphicsActivity.class));
     }
+
+    public void onProgrammaticLayoutClicked(View view) {
+        startActivity(new Intent(this, ProgrammaticLayoutActivity.class));
+    }
 }

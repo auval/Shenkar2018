@@ -26,7 +26,8 @@
         <activity android:name=".LayoutAnimationActivity" />
         <activity
             android:name=".llg.LowLevelGraphicsActivity"
-            android:label="@string/title_activity_low_level_graphics"></activity>
+            android:label="@string/title_activity_low_level_graphics" />
+        <activity android:name=".ProgrammaticLayoutActivity"></activity>
     </application>
 
 </manifest>
