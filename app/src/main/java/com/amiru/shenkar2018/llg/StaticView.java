@@ -44,7 +44,7 @@ public class StaticView extends View {
         lines.setColor(Color.WHITE);
 
         touchPaint = new Paint();
-        touchPaint.setColor(0xffff7777);
+        touchPaint.setColor(0xff_ff_bb_bb);
         touchPaint.setAntiAlias(true);
         touchPaint.setStyle(Paint.Style.STROKE);
         touchPaint.setPathEffect(new DashPathEffect(new float[]{20, 20}, 0));
