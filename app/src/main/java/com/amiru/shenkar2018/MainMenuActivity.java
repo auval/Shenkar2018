@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.amiru.shenkar2018.llg.LowLevelAnimationActivity;
 import com.amiru.shenkar2018.llg.LowLevelGraphicsActivity;
 import com.amiru.shenkar2018.recyclerview.RecyclerViewExampleActivity;
 import com.amiru.shenkar2018.storage.StorageExampleActivity;
@@ -74,5 +75,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void onProgrammaticLayoutClicked(View view) {
         startActivity(new Intent(this, ProgrammaticLayoutActivity.class));
+    }
+
+    public void onLowLovelAnimationClicked(View view) {
+        startActivity(new Intent(this, LowLevelAnimationActivity.class));
     }
 }
