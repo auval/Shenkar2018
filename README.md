@@ -247,18 +247,22 @@ collaborate using GitHub. Both students must contribute.
 
 ---
 
-Rest of the course plan:
--
----
-
-
----
-
 ### Lesson 8
 
      Sound & Music
 
+Please refer to [previous year's course project](https://github.com/auval/AndroidWorkshop) for code examples
+
 [Slides](https://goo.gl/d8mepK)
+
+
+
+---
+
+Rest of the course plan:
+-
+---
+
 
 ---
 

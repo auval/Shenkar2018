@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Dao
 public interface CaptainsLogDao {
-    @Query("select id, time, log from CaptainsLogEntity;")
+    @Query("select id, time, log from CaptainsLogEntity order by log asc;")
     LiveData<List<CaptainsLogEntity>> loadCaptainsLog();
 
     @Insert
