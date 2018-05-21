@@ -14,8 +14,9 @@ class BulletLogic {
      */
     public void calculateBulletLocation(PointF ret, float v0, float radAngle, long t0, long t1) {
         double x = calculateXLocation(v0, radAngle, t0, t1);
-        double y = x * Math.tan(radAngle)
-                - (gravity * x * x) / (2 * v0 * v0 * Math.cos(radAngle) * Math.cos(radAngle));
+        double y = v0 == 0 ? 0 :
+                x * Math.tan(radAngle)
+                        - (gravity * x * x) / (2 * v0 * v0 * Math.cos(radAngle) * Math.cos(radAngle));
 
         ret.x = (float) x;
         ret.y = (float) y;
